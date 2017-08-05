@@ -30,9 +30,10 @@ namespace S7Cmd
 
         //WARNING! hardcoded answer!
         //todo: parse input and make normal ans!
-        std::array<uint8_t, 12> data = {0x00, 0x04, 0x00, 0x04,
+        std::array<uint8_t, 16> data = {0xFF, 0x09, 0x00, 0x0C,
+                                        0x00, 0x04, 0x00, 0x04,
                                         0x01, 0x00, 0x00, 0x01,
-                                        0x10, 0x01, 0x00, 0x00};
+                                        0x10, 0x02, 0x00, 0x00};
 
 
         S7COMM_Header10 s7Hdr10;
