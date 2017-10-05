@@ -19,7 +19,10 @@ namespace FPLC
             PgDbHandler();
             ~PgDbHandler();
             bool loadBlockListByType(S7BLK::BlockType type);
-
+            
+            PgDbHandler(const PgDbHandler & rhs) = delete;
+            PgDbHandler & operator=(const PgDbHandler & rhs) = delete;
+            
         private:
             PGconn *conn;
             bool isConnection;
