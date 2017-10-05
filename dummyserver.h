@@ -50,7 +50,10 @@ class DummyServer
         int run(uint16_t port);
 
         void setCmdHandler(std::shared_ptr<S7Cmd::CmdHandler> & p);
-
+        
+        DummyServer(const DummyServer &) = delete;
+        DummyServer & operator=(const DummyServer &) = delete;
+    
     private:
         int checkSock(int sd);
         int checkBind(int ad);
