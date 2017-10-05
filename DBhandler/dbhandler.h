@@ -51,7 +51,10 @@ namespace FPLC
             // auxiliary array of type names
             // total amount of caches now: OB, DB, FB, FC, SDB, SFC, SFB
             std::array<S7BLK::BlockType, 7> blockCaches;
-
+        
+            DbHandler(const DbHandler &) = delete;
+            DbHandler & operator=(const DbHandler &) = delete;    
+        
         protected:
             // simple local cache for blocks
             std::map<uint16_t, std::vector<uint8_t> > OB;
