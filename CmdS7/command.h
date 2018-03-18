@@ -81,12 +81,7 @@ namespace S7Cmd
     {
         public:
             Command(FPLC::DbHandler & dbH);
-        
-            /*
-             * The NVI idiom should be used here, but it is ignored 
-             * because Execute func is pure virtual and has only one impl in derived classes.
-             */  
-        
+           
             virtual S7Status Execute(const std::vector<uint8_t> & input,
                                      std::vector<uint8_t> & output,
                                      SessionContext & ctx) = 0;
