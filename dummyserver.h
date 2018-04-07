@@ -60,7 +60,7 @@ class DummyServer
         int checkListen(int ld);
         int setnonblocking(int sockfd);
 
-        const size_t BUF_SIZE = 1514; // Ethernet II MTU
+        const size_t BUF_SIZE = 65535; 
         S7Cmd::CmdHandler* cmdHandler;
 };
 
