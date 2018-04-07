@@ -27,7 +27,7 @@ namespace FPLC
             PGconn *conn;
             bool isConnection;
 
-            //todo: temporary solution! fix it
+            //todo: temporary solution! fix it!
             bool loadSDBBlocks(S7BLK::SDBtype type);
     };
 
