@@ -124,8 +124,7 @@ int DummyServer::run(uint16_t port)
                 ev.events = EPOLLIN | EPOLLET;
                 ev.data.fd = client;
 
-                if (epoll_ctl(epollfd, EPOLL_CTL_ADD, client,
-                              &ev) == -1)
+                if (epoll_ctl(epollfd, EPOLL_CTL_ADD, client, &ev) == -1)
                 {
                     perror("epoll_ctl: conn_sock");
                     exit(EXIT_FAILURE);
@@ -136,9 +135,9 @@ int DummyServer::run(uint16_t port)
                 //do job
 
                 int client = events[n].data.fd;
-                std::vector<uint8_t> buffer;
-                buffer.resize(2*BUF_SIZE);
-                ssize_t cnt = recv(client, &buffer[0], 2*BUF_SIZE, 0);
+                std::vector<uint8_t> buffer;   //todo: get rid of this buffer!
+                buffer.resize(BUF_SIZE);
+                ssize_t cnt = recv(client, &buffer[0], BUF_SIZE, 0);
 
                 if(-1 == cnt || 0 == cnt) //-1 == err, 0 == end of file, the remote has closed the connection
                 {
