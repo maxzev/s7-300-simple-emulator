@@ -162,9 +162,9 @@ namespace S7Cmd
 
     typedef struct
     {
-        uint8_t  uploadId;
         uint16_t blockType;
         uint16_t blockNum;
+        uint8_t  uploadId;
     }BlockFd;
 
 
