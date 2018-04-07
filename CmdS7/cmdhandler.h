@@ -19,6 +19,9 @@ namespace S7Cmd
             CmdHandler(FPLC::DbHandler & dbHandler);
             ~CmdHandler();
             void processRequest(const std::vector<uint8_t> & input, int clientFd);
+        
+            CmdHandler(const CmdHandler &) = delete;
+            CmdHandler & operator= (const CmdHandler &) = delete;
 
         private:
             S7Commands* s7Commands;
