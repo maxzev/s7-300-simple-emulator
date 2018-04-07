@@ -112,10 +112,7 @@ namespace FPLC
 
         auto it = mr.find(blockNum);
 
-        if(it == mr.end())
-            return EMPTY.begin();
-
-        if(it->second.empty())
+        if(it == mr.end() || it->second.empty())
             return EMPTY.begin();
 
         return it;
