@@ -17,7 +17,7 @@ namespace FPLC
         * Returns a copy of source string with a marker like '%1, %2 ...%99'
         * replaced by c-style strings 'a1, a2 ...a99' in one pass.
         *
-        * First argument must be amount of all args!!!
+        * First argument must be a number of args!!!
         * Second argument - source string.
         *
         * Example:
