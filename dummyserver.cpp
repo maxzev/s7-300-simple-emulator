@@ -132,7 +132,7 @@ int DummyServer::run(uint16_t port)
             }
             else
             {
-                //do job
+                //do the job
 
                 int client = events[n].data.fd;
                 std::vector<uint8_t> buffer;   //todo: get rid of this buffer!
